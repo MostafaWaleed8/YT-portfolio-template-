@@ -1,0 +1,95 @@
+//import other files (Just for easy acsses)
+@import "reusable/vars";
+@import "reusable/base";
+@import "reusable/mixin";
+@import "reusable/meadia-que";
+@import "reusable/ham-navbar";
+@import "reusable/animations";
+@import "reusable/global";
+
+//End of importing other files
+
+//for games page only
+.nav-element {
+  &:first-child {
+    color: $color-primary !important;
+    &:hover {
+      color: $color-secondary !important;
+    }
+  }
+  &:nth-child(2) {
+    color: $color-secondary !important;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 70%;
+  .games-heading {
+    margin: 15vh 0;
+    font-size: 3rem;
+  }
+
+  .games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .game {
+      padding: 1.5rem;
+      background-color: $color-secondary-dark;
+      border-radius: 0.625rem;
+      color: $color-primary;
+      text-decoration: none;
+      width: 20vw;
+      height: 45vh;
+      margin-bottom: 50px;
+      transition: all 0.2s ease-in-out;
+      &:not(:first-of-type),
+      &:not(:last-of-type) {
+        margin-left: 1rem;
+      }
+
+      &:hover {
+        background-color: darken($color-secondary-dark, 10%);
+      }
+      .game-img {
+        width: 30vh;
+        height: 30vh;
+        border-radius: 0.625rem;
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    .game-title {
+      font-size: 1.625rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: auto;
+  }
+
+  .game {
+    background-color: $color-secondary;
+    border-radius: 10px;
+    min-width: 80vw !important;
+    margin: 1rem auto !important;
+  }
+}
+
+//End for games page only.

@@ -1,0 +1,61 @@
+//undoing default browser styles
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+// End undoing default browser styles
+
+//base and new default styles that goes for all site elemnts
+html {
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  background: linear-gradient(45deg, black, #272727);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-primary;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  text-align: center;
+  a {
+    text-decoration: none;
+  }
+}
+
+//Selection Color
+
+::-moz-selection {
+  // Code for Firefox
+  color: $color-primary;
+  background: $color-secondary;
+}
+
+::selection {
+  color: $color-primary;
+  background: $color-secondary;
+}
+
+//Scroll Bar
+
+::-webkit-scrollbar {
+  //Width
+  width: 5px;
+  &-track {
+    //Track
+    background: #272727;
+  }
+
+  &-thumb {
+    //Handle
+    background: $color-secondary;
+
+    &:hover {
+      //Handle on hover
+      background: lighten($color-secondary, 10%);
+    }
+  }
+}

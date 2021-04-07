@@ -1,0 +1,28 @@
+@keyframes fadeIn {
+  0% {
+    height: 10vh;
+  }
+
+  100% {
+    height: 35vh;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn-txt {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn-txt {
+  animation: fadeIn-txt 0.3s ease-in-out backwards;
+  animation-delay: 0.2s;
+}

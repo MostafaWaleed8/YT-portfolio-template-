@@ -1,0 +1,52 @@
+@media (max-width: 45.625em) {
+
+  
+  .nav-items {
+    display: none !important;
+    flex-direction: column;
+  }
+  .nav-element {
+
+    &:not(:first-of-type) {
+      margin-left: 0 !important;
+    }
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+    font-size: 1.375rem;
+    &:last-of-type {
+      margin-right: 0rem !important;
+    }
+  }
+
+  .ham-ico {
+    display: flex !important;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 2rem;
+
+    .bar {
+      background-color: $color-secondary;
+      width: 2.5rem;
+      height: 0.3125rem;
+      border-radius: 0.625rem;
+      transition: all 0.2s ease-in-out;
+      transform-origin: 7px 2.5px;
+      &:not(:last-child) {
+        margin-bottom: 0.25rem;
+      }
+    }
+    &.open {
+      > :first-child {
+        transform: rotate(45deg);
+      }
+
+      > :nth-of-type(2) {
+        opacity: 0;
+      }
+      > :last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+//import other files (Just for easy acsses)
+@import "reusable/vars";
+@import "reusable/utillites";
+@import "reusable/base";
+@import "reusable/mixin";
+@import "reusable/meadia-que";
+@import "reusable/ham-navbar";
+@import "reusable/animations";
+@import "reusable/global";
+
+//End of importing other files
+
+//Navgation Bar.
+
+//End of Navgation Bar.
+
+.text-box {
+  margin-top: 40vh;
+  height: auto;
+  @include center-item;
+  text-align: center;
+
+  .head-line {
+    font-size: 4rem;
+    margin-bottom: 5rem;
+  }
+}
+
+#about {
+  @include center-item;
+
+  .about-head {
+    font-size: 4rem;
+    margin-bottom: 1.25rem;
+  }
+  .about-txt {
+    width: 50%;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .btns {
+    display: flex;
+    margin-bottom: 8rem;
+
+    .btn-about:not(:last-of-type) {
+      margin-right: 1.25rem;
+    }
+  }
+}

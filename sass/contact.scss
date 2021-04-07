@@ -1,0 +1,82 @@
+//import other files (Just for easy acsses)
+@import "reusable/vars";
+@import "reusable/base";
+@import "reusable/mixin";
+@import "reusable/meadia-que";
+@import "reusable/ham-navbar";
+@import "reusable/animations";
+@import "reusable/global";
+
+//End of importing other files
+
+//for contact page only
+body {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.nav-element {
+  &:first-child {
+    color: $color-primary !important;
+    &:hover {
+      color: $color-secondary !important;
+    }
+  }
+  &:last-child {
+    color: $color-secondary !important;
+  }
+}
+
+.text-box {
+  margin-top: 15vh;
+  @include center-item;
+  text-align: center;
+
+  .contact-heading {
+    margin-bottom: 5vh;
+  }
+
+  .contact-sup {
+    font-size: 1.2rem;
+    width: 50%;
+    margin-bottom: 10vh;
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: white;
+    .contact-meadia {
+      width: 30vh;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    height: max-content;
+  }
+
+  .contact-sup {
+    font-size: 1.2rem;
+    width: 80% !important;
+    line-height: 2rem;
+    margin-bottom: 10vh;
+  }
+
+  .contact-meadia {
+    width: 30vh;
+    margin-bottom: 5rem !important;
+  }
+}
